@@ -21,10 +21,10 @@ function countDown()
     var h = Math.floor((diff / 1000 / 60 / 60) % 24);
     var d = Math.floor((diff / 1000 / 60 / 60 / 24));
 
-    second.innerHTML =s;
-    minute.innerHTML =m;
-    hours.innerHTML =h;
-    days.innerHTML =d;
+    second.innerHTML =(s < 10) ? "0" + s : s ;
+    minute.innerHTML =(m < 10) ? "0" + m : m ;
+    hours.innerHTML =(h < 10) ? "0" + h : h ;
+    days.innerHTML =(d < 10) ? "0" + d : d ;
 }
 setInterval(countDown,1000);
 year.innerHTML = nextYear.getFullYear();
